@@ -804,7 +804,7 @@ class MinecraftForge_1_10(MinecraftForgeBase, Vanilla_1_10):
         return "minecraft forge 1.10"
 
     def default_url(self):
-        return "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.10.2-12.18.0.2008/forge-1.10.2-12.18.0.2008-installer.jar"
+        return "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.10.2-12.18.2.2122/forge-1.10.2-12.18.2.2122-installer.jar"
 
     def exe_path(self):
         filenames = [filename \
