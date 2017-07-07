@@ -668,6 +668,24 @@ class Vanilla_1_11(VanillaBase):
     def log_error_re(self):
         return re.compile(".* \[SEVERE\] .*", re.MULTILINE)
 
+class Vanilla_1_12(VanillaBase):
+
+    @classmethod
+    def name(self):
+        return "vanilla 1.12"
+
+    def default_url(self):
+        return "https://s3.amazonaws.com/Minecraft.Download/versions/1.12/minecraft_server.1.12.jar"
+
+    def log_path(self):
+        return "./logs/latest.log"
+
+    def log_start_re(self):
+        return re.compile("^.*Starting minecraft server version 1\.11.*")
+
+    def log_error_re(self):
+        return re.compile(".* \[SEVERE\] .*", re.MULTILINE)
+
 
 # MinecraftForge
 # ''''''''''''''
