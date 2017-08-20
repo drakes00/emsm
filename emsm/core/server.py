@@ -815,6 +815,23 @@ class MinecraftForge_1_8(MinecraftForgeBase, Vanilla_1_8):
         return os.path.join(self.directory(), filename)
 
 
+class MinecraftForge_1_9(MinecraftForgeBase, Vanilla_1_9):
+
+    @classmethod
+    def name(self):
+        return "minecraft forge 1.9"
+
+    def default_url(self):
+        return "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.9.4-12.17.0.2051/forge-1.9.4-12.17.0.2051-installer.jar"
+
+    def exe_path(self):
+        filenames = [filename \
+                     for filename in os.listdir(self.directory()) \
+                     if re.match("^forge-1\.9.*.jar$", filename)]
+        filename = filenames[0]
+        return os.path.join(self.directory(), filename)
+
+
 class MinecraftForge_1_10(MinecraftForgeBase, Vanilla_1_10):
 
     @classmethod
@@ -828,6 +845,40 @@ class MinecraftForge_1_10(MinecraftForgeBase, Vanilla_1_10):
         filenames = [filename \
                      for filename in os.listdir(self.directory()) \
                      if re.match("^forge-1\.10.*.jar$", filename)]
+        filename = filenames[0]
+        return os.path.join(self.directory(), filename)
+
+
+class MinecraftForge_1_11(MinecraftForgeBase, Vanilla_1_11):
+
+    @classmethod
+    def name(self):
+        return "minecraft forge 1.11"
+
+    def default_url(self):
+        return "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.11.2-13.20.1.2454/forge-1.11.2-13.20.1.2454-installer.jar"
+
+    def exe_path(self):
+        filenames = [filename \
+                     for filename in os.listdir(self.directory()) \
+                     if re.match("^forge-1\.11.*.jar$", filename)]
+        filename = filenames[0]
+        return os.path.join(self.directory(), filename)
+
+
+class MinecraftForge_1_12(MinecraftForgeBase, Vanilla_1_12):
+
+    @classmethod
+    def name(self):
+        return "minecraft forge 1.10"
+
+    def default_url(self):
+        return "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12-14.21.1.2443/forge-1.12-14.21.1.2443-installer.jar"
+
+    def exe_path(self):
+        filenames = [filename \
+                     for filename in os.listdir(self.directory()) \
+                     if re.match("^forge-1\.12.*.jar$", filename)]
         filename = filenames[0]
         return os.path.join(self.directory(), filename)
 
@@ -1113,6 +1164,8 @@ class ServerManager(object):
             MinecraftForge_1_7,
             MinecraftForge_1_8,
             MinecraftForge_1_10,
+            MinecraftForge_1_11,
+            MinecraftForge_1_12,
             BungeeCordServerWrapper,
             Spigot,
             ]
