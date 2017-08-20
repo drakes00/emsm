@@ -870,7 +870,7 @@ class MinecraftForge_1_12(MinecraftForgeBase, Vanilla_1_12):
 
     @classmethod
     def name(self):
-        return "minecraft forge 1.10"
+        return "minecraft forge 1.12"
 
     def default_url(self):
         return "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12-14.21.1.2443/forge-1.12-14.21.1.2443-installer.jar"
